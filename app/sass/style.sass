@@ -1,10 +1,179 @@
 @import "vars"
 @import "fonts"
-@import "container"
 
-.item
-	border: 1px solid green 
-	font-size: 30px
+body 
+	font-family: $font-main
+	font-size: 15px
+
+
+.header-3 
+	border-top: 1px solid #e8e6e6
+	border-bottom: 1px solid #e8e6e6
+
+.header-3-wrap
+	display: flex
+	flex-wrap: wrap
+
+.catalog 	
+	width: 325px
+	margin: -1px 0px
+	position: relative
+	font-family: $font-main
+	padding: 25px 34px
+	color: #262626
+	background-color: #ffcb00
+	cursor: pointer
+
+.catalog__humburger 
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	width: 22px
+	height: 16px
+	span 
+		display: block
+		margin-top: 7px
+		width: 100%
+		height: 2px
+		background-color: #262626
+		&::before,
+		&::after
+			content: ""
+			position: absolute
+			width: 100%
+			height: 2px
+			background-color: #262626
+		&:before
+			top: 0
+		&:after
+			bottom: 0
+
+.catalog__title 
+	display: inline-block
+	margin-left: 10px
+	vertical-align: middle
+	font-weight: 600
+	text-transform: uppercase
+
+.catalog__menu	
+	display: none
+	position: absolute
+	z-index: 1000
+	top: 100%
+	left: 0
+	width: 100%
+	margin: 0
+	padding: 0
+	list-style: none
+	border-bottom: 3px solid #ffcb00
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, .1)
+	&:after
+		content: ""
+		position: absolute
+		bottom: -15px
+		left: 50%
+		width: 0
+		height: 0
+		transform: translateX(-50%)
+		border-style: solid
+		border-width: 12px 10.5px 0 10.5px
+		border-color: #ffcb00 transparent transparent transparent
+
+.catlog__category 
+	position: relative
+	display: block
+	padding: 25px 35px 25px 80px
+	color: #262626
+	text-decoration: none
+	&:before 
+		content: ""
+		position: absolute
+		top: 50%
+		left: 20px
+		transform: translateY(-50%)
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		right: 20px
+		width: 9px
+		height: 9px
+		border-top: 1px solid #262626
+		border-right: 1px solid #262626
+		transform: rotate(45deg) translateY(-50%)
+	&:hover
+		background-color: #f6f6f6
+		text-decoration: none
+		color: inherit
+
+.catalog__menu li
+	&:nth-child(1) .catlog__category:before
+		width: 30px
+		height: 34px
+		background: url('../img/catlog__category-sprite.png') -106px -10px
+	&:nth-child(2) .catlog__category:before
+		width: 31px
+		height: 31px
+		background: url('../img/catlog__category-sprite.png') -207px -10px
+	&:nth-child(3) .catlog__category:before
+		width: 33px
+		height: 36px
+		background: url('../img/catlog__category-sprite.png') -309px -10px
+	&:nth-child(4) .catlog__category:before
+		width: 31px
+		height: 31px
+		background: url('../img/catlog__category-sprite.png') -258px -10px
+	&:nth-child(5) .catlog__category:before
+		width: 27px
+		height: 27px
+		background: url('../img/catlog__category-sprite.png') -10px -10px
+	&:nth-child(6) .catlog__category:before
+		width: 29px
+		height: 29px
+		background: url('../img/catlog__category-sprite.png') -57px -10px
+	&:nth-child(7) .catlog__category:before
+		width: 31px
+		height: 27px
+		background: url('../img/catlog__category-sprite.png') -156px -10px
+	
+.catalog__submenu-wrap 
+	display: none
+	width: 815px
+	position: absolute
+	left: 100%
+	top: 0
+	bottom: 0
+	
+.catalog__submenu
+	display: flex
+	flex-wrap: wrap
+	justify-content: left
+	margin: 0
+	padding: 0
+	list-style: none
+	padding-top: 15px
+	margin-top: -1px
+	background-color: #f6f6f6
+	border: 1px solid #e5e5e5
+	
+.catalog__item
+	width: 25%
+	text-align: center
+
+.catalog__item-img
+	margin: 0 auto
+	height: 150px
+	width: 190px
+
+.catalog__item-link
+	color: inherit
+	&:hover 
+		color: #f20f0f
+		text-decoration: none
+		
+.search
+	
+	background-color: red
 
 @import "media"
      
