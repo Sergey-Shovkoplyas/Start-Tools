@@ -22,23 +22,26 @@
 
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
 	<link rel="stylesheet" href="css/style.min.css">
 
 </head>
 
 <body>
+
 	<header class="header">
 		<section class="header-3">
 			<div class="container">
-				<dvi class="header-3-wrap">
+				<div class="header-3-wrap">
 					<div class="catalog">
 						<div class="catalog__humburger"><span></span></div>
 						<div class="catalog__title">Каталог товаров</div>
 						<ul class="catalog__menu">
-							<li><a class="catlog__category" class="catlog__category" href="#">Электроинструмент</a></li>
+							<li><a class="catlog__category" href="#">Электроинструмент</a></li>
 							<li><a class="catlog__category" href="#">Аккумуляторный инструмент</a></li>
 							<li><a class="catlog__category" href="#">Садовый инструмент</a>
-
 								<div class="catalog__submenu-wrap">
 									<ul class="catalog__submenu">
 										<li class="catalog__item">
@@ -47,25 +50,22 @@
 										</li>
 										<li class="catalog__item">
 											<div class="catalog__item-img"><img src="img/catalog__item-2.png" alt=""></div>
-											<a class="catalog__item-link" href="#">Бензопилы цепные</a>
+											<a class="catalog__item-link" href="#">Электропилы цепные</a>
 										</li>
 										<li class="catalog__item">
 											<div class="catalog__item-img"><img src="img/catalog__item-3.png" alt=""></div>
-											<a class="catalog__item-link" href="#">Бензопилы цепные</a>
+											<a class="catalog__item-link" href="#">Бензотриммеры</a>
 										</li>
 										<li class="catalog__item">
 											<div class="catalog__item-img"><img src="img/catalog__item-4.png" alt=""></div>
-											<a class="catalog__item-link" href="#">Бензопилы цепные</a>
+											<a class="catalog__item-link" href="#">Электро-триммеры</a>
 										</li>
 										<li class="catalog__item">
 											<div class="catalog__item-img"><img src="img/catalog__item-5.png" alt=""></div>
-											<a class="catalog__item-link" href="#">Бензопилы цепные</a>
+											<a class="catalog__item-link" href="#">Аккумуляторные пилы цепные</a>
 										</li>
-
 									</ul>
 								</div>
-
-
 							</li>
 							<li><a class="catlog__category" href="#">Оборудование</a></li>
 							<li><a class="catlog__category" href="#">Запчасти</a></li>
@@ -73,8 +73,16 @@
 							<li><a class="catlog__category" href="#">Уценённые товары</a></li>
 						</ul>
 					</div>
-					<div class="search"></div>
-				</dvi>
+					<form class="search" action="#" method="get">
+						<input class="search__text" type="search" name="text" placeholder="Введите для поиска">
+						<button class="search__btn" type="submit"></button>
+					</form>
+					<a href="#" class="compare">Сравнить</a>
+					<a href="#" class="cart">
+						Корзина
+						<span class="cart__quantity">7</span>
+					</a>
+				</div>
 
 
 
@@ -83,11 +91,179 @@
 		</section>
 	</header>
 
+	<section class="sales">
+		<div class="container">
+			<div class="section-title-wrap">
+				<h2 class="section-title">Лидеры продаж</h2>
+			</div>
+			<div class="sales__slider">
 
+				<div class="product product--active">
+					<div class="product__hit">Хит</div>
+					<div class="product__img">
+						<img src="img/product-1.png" alt="1">
+					</div>
+					<div class="product__description">
+						<p class="product__name">
+							Шлифмашинка угловая
+							Минск МТ-3 МШМ-1170
+						</p>
+						<span class="product__availability">в наличии</span>
+						<div class="product__price">695 грн</div>
+						<div class="product__compare"></div>
+						<div class="product__btn"><button class="btn">В корзину</button></div>
+						<div class="product__btn-fast"><button class="btn btn--fast">Купить в 1 клик</button></div>
+					</div>
+				</div>
+
+				<div class="product product--active">
+					<div class="product__hit">Хит</div>
+					<div class="product__img">
+						<img src="img/product-2.png" alt="1">
+					</div>
+					<div class="product__description">
+						<p class="product__name">
+							Шуруповёрт
+							аккумуляторный Start Pro
+							SCD2-12
+						</p>
+						<span class="product__availability">в наличии</span>
+						<div class="product__price">740 грн</div>
+						<div class="product__compare product__compare--active"></div>
+						<div class="product__btn"><button class="btn">В корзину</button></div>
+						<div class="product__btn-fast"><button class="btn btn--fast">Купить в 1 клик</button></div>
+					</div>
+				</div>
+
+				<div class="product">
+					<div class="product__hit">Хит</div>
+					<div class="product__img">
+						<img src="img/product-3.png" alt="1">
+					</div>
+					<div class="product__description">
+						<p class="product__name">
+							Пила циркулярная Start
+							Pro SCS - 2500
+						</p>
+						<span class="product__availability product__availability--no">нет в наличии</span>
+						<div class="product__price">2580 грн</div>
+						<div class="product__compare"></div>
+						<div class="product__btn"><button class="btn btn--no-active">В корзину</button></div>
+					</div>
+				</div>
+
+				<div class="product product--active">
+					<div class="product__hit">Хит</div>
+					<div class="product__img">
+						<img src="img/product-4.png" alt="1">
+					</div>
+					<div class="product__description">
+						<p class="product__name">
+							Дрель электрическая
+							Start Pro SED-920
+						</p>
+						<span class="product__availability">в наличии</span>
+						<div class="product__price">980 грн</div>
+						<div class="product__compare"></div>
+						<div class="product__btn"><button class="btn">В корзину</button></div>
+						<div class="product__btn-fast"><button class="btn btn--fast">Купить в 1 клик</button></div>
+					</div>
+				</div>
+
+				<div class="product product--active">
+					<div class="product__hit">Хит</div>
+					<div class="product__img">
+						<img src="img/product-1.png" alt="1">
+					</div>
+					<div class="product__description">
+						<p class="product__name">
+							Шлифмашинка угловая
+							Минск МТ-3 МШМ-1170
+						</p>
+						<span class="product__availability">в наличии</span>
+						<div class="product__price">695 грн</div>
+						<div class="product__compare"></div>
+						<div class="product__btn"><button class="btn">В корзину</button></div>
+						<div class="product__btn-fast"><button class="btn btn--fast">Купить в 1 клик</button></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="video">
+		<div class="container">
+			<div class="section-title-wrap">
+				<h2 class="section-title">Видеообзоры</h2>
+			</div>
+			<div class="video__slider">
+				<a class="video__item" data-fancybox href="https://www.youtube.com/watch?v=GT5elr1AyXI">
+					<div class="video__img-wrap">
+						<img class="video__img" src="img/video-1.jpg" alt="#">
+						<div class="video__play"></div>
+					</div>
+					<p class="video__description">
+						Обзор дрели-шуруповерта
+						Bosch GSR 10.8-2-LI
+					</p>
+				</a>
+
+				<a class="video__item" data-fancybox href="https://www.youtube.com/watch?v=GT5elr1AyXI">
+					<div class="video__img-wrap">
+						<img class="video__img" src="img/video-2.jpg" alt="#">
+						<div class="video__play"></div>
+					</div>
+					<p class="video__description">
+						Обзор ударной дрели
+						Makita HP1640
+					</p>
+				</a>
+
+				<a class="video__item" data-fancybox href="https://www.youtube.com/watch?v=GT5elr1AyXI">
+					<div class="video__img-wrap">
+						<img class="video__img" src="img/video-3.jpg" alt="#">
+						<div class="video__play"></div>
+					</div>
+					<p class="video__description">
+						Обзор дрели Интерскол
+						Д-16/1050Р2
+					</p>
+				</a>
+
+				<a class="video__item" data-fancybox href="https://www.youtube.com/watch?v=GT5elr1AyXI">
+					<div class="video__img-wrap">
+						<img class="video__img" src="img/video-4.jpg" alt="#">
+						<div class="video__play"></div>
+					</div>
+					<p class="video__description">
+						Обзор дрели-шуруповёрта
+						Bosch GSR 18-2-LI Plus Обзор
+					</p>
+				</a>
+
+				<a class="video__item" data-fancybox href="https://www.youtube.com/watch?v=GT5elr1AyXI">
+					<div class="video__img-wrap">
+						<img class="video__img" src="img/video-4.jpg" alt="#">
+						<div class="video__play"></div>
+					</div>
+					<p class="video__description">
+						Обзор дрели-шуруповёрта
+						Bosch GSR 18-2-LI Plus Обзор
+					</p>
+				</a>
+
+
+			</div>
+
+		</div>
+	</section>
 
 	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/common.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
 
+	<script src="js/common.js"></script>
 </body>
 
 </html>

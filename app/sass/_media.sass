@@ -1,21 +1,92 @@
 @import "mixins/media-breakpoints"
 @import "vars"
 
-
-
 /*==========  Desktop First  ==========*/
 
 /* <1200px (960px) */
 +media-breakpoint-down(lg)
+  .search
+    width: 53%
+
+  .catlog__category
+    padding: 20px 35px 20px 70px
+    &::before
+      left: 20px
+
+  .catalog__submenu-wrap
+    width: 665px
+
+  .catalog__item 
+    padding: 0 5px
+    margin-bottom: 10px
+
+  .sales__slider
+    height: 505px
+
+  .video__slider
+    .slick-prev,
+    .slick-next
+      top: 60px
   
 /* <992px (720px) */
 +media-breakpoint-down(md)
+  .catalog
+    width: 35%
+    padding: 20px
+
+  .search
+    width: 45%
+
+  .compare
+    padding: 35px 0 5px
+
+  .cart
+    padding: 35px 0 5px
+
+  .catlog__category
+    padding-left: 50px
+    &::before
+      left: 10px
+
+  .catalog__submenu-wrap
+    width: 450px
+
+  .catalog__item
+    width: 33.33%
+
 
 /* <768px (540px) */
 +media-breakpoint-down(sm)
+  .catalog
+    width: 100%
+    order: 1
+
+  .search
+    width: 60%
+    margin: 10px 0
+
+  .catalog__submenu-wrap
+    width: 100%
+    position: inherit
+
+  .catalog__submenu
+    justify-content: space-around
+
+  .catalog__item
+    width: 50%
+    max-width: 185px
+
+  .sales__slider
+    height: 520px
 
 /* <576px (auto) */
 +media-breakpoint-down(xs)
+  .sales__slider
+    height: auto
+
+  .video__slider
+    height: auto
+  
  
 
 
