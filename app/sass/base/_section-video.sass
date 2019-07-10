@@ -1,0 +1,57 @@
+.video__slider
+	position: relative
+	margin: 0 -15px
+	.slick-prev,
+	.slick-next
+		top: 70px
+	.slick-prev
+		left: -10px
+	.slick-next
+		right: -10px
+
+.video__item 
+	position: relative
+	margin: 0 15px
+	&:hover
+		text-decoration: none
+
+.video__img-wrap 
+	position: relative
+
+.video__play
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 56px
+	height: 56px
+	border: 2px solid #fff
+	border-radius: 50%
+	transition: .2s
+	&:hover
+		border-color: #ffcb00
+		&::after
+			border-color: transparent transparent transparent #ffcb00
+
+	&::after
+		content: ""
+		position: absolute
+		top: 50%
+		left: 60%
+		transform: translate(-50%, -50%)
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 14px 0 14px 21px
+		border-color: transparent transparent transparent #fff
+		transition: .2s
+
+.video__img 
+	width: 100%
+	margin-bottom: 10px
+
+.video__description 
+		margin: 0
+		font-size: 17px
+		color: #000
+		font-weight: 600

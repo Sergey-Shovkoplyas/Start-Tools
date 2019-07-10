@@ -77,6 +77,6 @@ $( document ).ready(function() {
 	});
 
 	// initialize banner__slider
-	$('.banner__slider').slick();
+	// $('.banner__slider').slick();
 
 });
