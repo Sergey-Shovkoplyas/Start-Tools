@@ -1,0 +1,153 @@
+.header-1
+  padding: 12px 0
+  background-color: #363739
+  font-size: 13px
+  color:  #d6d6d6
+
+.header-1__currency
+  text-transform: uppercase
+  span 
+    color: #ffcb00
+
+.header-1__timing
+  position: relative
+  margin-left: 40px
+  padding-left: 20px
+  &::before
+    content: ""
+    position: absolute
+    left: 0
+    width: 20px
+    height: 20px
+    background: url("../img/header-1__timing.png")
+.header-1__timing-item 
+  padding: 0 10px
+  border-right: 1px solid #d6d6d6
+  white-space: nowrap
+  &:last-child
+    border-right: none
+
+.header-1__phone
+  position: relative
+  padding-left: 25px
+  &::before
+    content: ""
+    position: absolute
+    top: 2px
+    left: 0
+    width: 14px
+    height: 14px
+    background: url("../../img/header-1__phone.png") no-repeat center
+
+.header-1__phone-number
+  font-size: 15px
+  color: #ffcb00
+  &:hover
+    color: #ffcb00
+    text-decoration: none
+
+.header-1__phone-text
+  font-size: 10px
+
+.header-1__user
+  position: relative
+  display: inline-block
+  margin-left: 40px
+  padding-left: 35px
+  &::before
+    content: ""
+    position: absolute
+    left: 0
+    width: 22px
+    height: 20px
+    background: url("../../img/header-1__user.png") no-repeat -52px -10px
+  a
+    color: #d6d6d6
+    &:hover 
+      color: #ffcb00
+.header-1__user--hovered
+  &::before
+    background-position: -10px -10px
+
+.header-1__lenguage
+  position: relative
+  display: inline-block
+  float: right
+  padding-right: 15px
+  color: #ffffff
+  font-size: 15px
+  text-transform: uppercase
+  cursor: pointer
+  &::after 
+    content: ""
+    position: absolute
+    right: 0
+    top: 5px
+    width: 7px
+    height: 7px
+    border-left: 2px solid #fff
+    border-bottom: 2px solid #fff
+    transform: rotate(-45deg)
+
+.header-1__lenguage-list
+  display: none
+  position: absolute
+  top: 41px
+  left: -15px
+  z-index: 100
+  padding: 0
+  margin: 0
+  list-style: none
+  background-color: #fff
+  border: 1px solid #d9d9d9
+  color: #000
+  li
+    padding: 10px 15px
+    cursor: pointer
+    &:hover 
+      background-color: #f6f6f6
+
+
+  
+/*==========  Desktop First  ==========*/
+
+/* <1200px (960px) */
++media-breakpoint-down(lg)
+  .header-1__timing
+    margin-left: 0px
+
+  .header-1__user
+    margin-left: 0
+  
+/* <992px (720px) */
++media-breakpoint-down(md)
+  .header-1__timing
+    margin-left: 40px
+
+  .header-1__user
+    margin-left: 20px
+
+/* <768px (540px) */
++media-breakpoint-down(sm)
+  .header-1__timing
+    margin-left: -8px
+    margin-bottom: 10px
+
+  .header-1__currency
+    margin-bottom: 10px
+
+  .header-1__phone
+    padding-left: 0
+    &::before
+      display: none
+
+  .header-1__user
+    margin-left: -40px
+
+  
+  .header-1__lenguage
+    margin-left: -15px
+
+
+/* <576px (auto) */
++media-breakpoint-down(xs)

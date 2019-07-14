@@ -1,5 +1,31 @@
 $( document ).ready(function() {
 
+	//header-1 user block hover
+	let $user = $('.header-1__user');
+	let $login = $('.header-1__login');
+	let $registration = $('.header-1__registration');
+
+
+	$login.hover( userHovered, userNoHovered );
+	$registration.hover( userHovered, userNoHovered );
+
+	function userHovered() {
+		$user.addClass('header-1__user--hovered');
+	}
+
+	function userNoHovered() {
+		$user.removeClass('header-1__user--hovered');
+	}
+	
+	// show lenguage-list
+	let $lenguageList = $('.header-1__lenguage-list');
+
+	$('.header-1__lenguage').on('click', function() {
+		$lenguageList.toggle('fast');
+	});
+
+	
+
 	// show catalog
 	let $catalog = $('.catalog');
 	let $catalogMenu = $('.catalog__menu');
