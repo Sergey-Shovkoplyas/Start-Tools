@@ -24,6 +24,18 @@ $( document ).ready(function() {
 		$lenguageList.toggle('fast');
 	});
 
+	//shov navigation on mobile
+
+	$('.nav__hamburger').on('click', function() {
+		$('.nav__list').toggle('fast');
+	});
+
+	// show navigation submenu
+
+	$('.nav__link').on('click', function() {
+		$(this).next().toggle('fast');
+	});
+
 	
 
 	// show catalog
@@ -103,6 +115,18 @@ $( document ).ready(function() {
 	});
 
 	// initialize banner__slider
-	// $('.banner__slider').slick();
+	$('.banner__slider').slick({
+		dots: true,
+		autoplay: false,
+		autoplaySpeed: 2000,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					dots: false
+				}
+			}
+		]
+	});
 
 });

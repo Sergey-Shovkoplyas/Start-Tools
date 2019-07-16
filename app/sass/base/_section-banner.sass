@@ -1,0 +1,79 @@
+.banner
+  margin-bottom: 50px
+
+.banner__slider
+  .slick-prev
+    top: 45%
+    left: 25px
+  .slick-next
+    top: 45%
+    right: 25px
+  .slick-prev,
+  .slick-next
+    &:hover
+      border-color: #ffcb00
+
+.banner__item
+  position: relative
+  img 
+    width: 100%
+
+.banner__btn
+  position: absolute
+  bottom: 13%
+  left: 5%
+  width: 235px
+
+.slick-dots
+  padding: 0
+  margin: 0
+  list-style: none
+  position: absolute 
+  left: 50%
+  bottom: 15px
+  transform: translatex(-50%)
+  li 
+    display: inline-block
+    margin-right: 10px
+    button
+      display: block
+      padding: 0
+      font-size: 0
+      width: 10px
+      height: 10px
+      background-color: transparent
+      border-radius: 10px
+      border: 2px solid #e3e9ec
+  li.slick-active
+    button
+      border: none
+      background-color: #ffcb00
+  & li:last-child
+    margin-right: 0
+
+
+
+
+
+/*==========  Desktop First  ==========*/
+
+/* <1200px (960px) */
++media-breakpoint-down(lg)
+  
+/* <992px (720px) */
++media-breakpoint-down(md)
+
+/* <768px (540px) */
++media-breakpoint-down(sm)
+  .banner
+    margin-bottom: 20px
+  .banner__btn
+    bottom: 5px
+    left: 50%
+    transform: translateX(-50%)
+
+/* <576px (auto) */
++media-breakpoint-down(xs)
+  .banner__item
+    img 
+      width: 190%
