@@ -1,0 +1,130 @@
+.footer
+  color: #86868f
+  background-color: #1f1f23
+
+.footer-1
+  padding: 40px 0 30px
+  border-bottom: 1px solid #040405
+
+.footer__titile
+  font-size: 20px
+  font-weight: 600
+  line-height: 24px
+  margin-right: -20px
+  margin-bottom: 25px
+  color: #fff
+
+.footer__subscribe
+  margin-bottom: 30px
+
+.footer__text-area
+  width: 100%
+  padding: 20px 30px
+  margin-bottom: 15px
+  border: none
+  &::placeholder
+    color: #979797
+    font-weight: 300
+
+.footer__social
+  display: flex
+  justify-content: space-between
+
+.footer__social-item
+  width: 50px
+  height: 50px
+  border: 1px solid #86868f
+  transition: .2s
+  &:hover
+    border-color: #ffcb00
+
+.footer__list
+  width: 140px
+  list-style: none
+  padding: 0
+  margin: 0
+
+.footer__list-item
+  margin-bottom: 20px
+  &:last-child
+    margin-bottom: 0
+
+.footer__list-link
+  color: inherit
+  &:hover 
+    color: #ffcb00
+
+.footer__phone
+  color: inherit
+  &:hover
+    color: #ffcb00
+    text-decoration: none
+
+.footer__timing-title
+  width: 130px 
+  margin-bottom: 20px
+  color: #fff
+  font-weight: 500
+  font-size: 13px
+
+.footer__timing-item
+  display: block
+  font-size: 13px
+  line-height: 20px
+  span
+    white-space: nowrap
+
+
+.footer-2
+  padding: 16px 0
+  text-align: center
+  font-size: 13px
+  font-weight: 300
+  border-top: 1px solid #2e2d38
+
+
+/*==========  Desktop First  ==========*/
+
+/* <1200px (960px) */
++media-breakpoint-down(lg)
+  
+/* <992px (720px) */
++media-breakpoint-down(md)
+  .footer__titile
+    font-size: 18px
+
+  .footer__list
+    width: auto
+
+  .footer__list-item
+    font-size: 13px
+
+  .footer__text-area
+    padding: 10px 15px
+    &::placeholder
+      font-size: 13px
+
+  .footer__phone
+    font-size: 15px
+
+  .footer__timing-item
+    margin-bottom: 10px
+
+/* <768px (540px) */
++media-breakpoint-down(sm)
+  .footer__social
+    justify-content: space-around
+    margin-bottom: 25px
+
+  .footer__titile
+    margin-bottom: 10px
+    margin-right: 0
+
+  .footer__list
+    margin-bottom: 20px
+
+  .footer__list-item
+    margin-bottom: 10px
+
+/* <576px (auto) */
++media-breakpoint-down(xs)
