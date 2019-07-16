@@ -8,6 +8,7 @@ const { src, dest, series, parallel, watch } = require('gulp'),
 		browserSync   = require('browser-sync'),
 		concat        = require('gulp-concat'),
 		notify        = require('gulp-notify');
+		cmq						=	require('gulp-merge-media-queries');
 
 function styles () {
 	return src('app/sass/**/*.sass')
@@ -17,9 +18,12 @@ function styles () {
 	.pipe(autoprefixer(['last 2 versions']))
 	.pipe(cleanCSS())
 	.pipe(sourceMaps.write())
+	.pipe(cmq())
 	.pipe(dest('app/css'))
 	.pipe(browserSync.stream());
 }
+
+
 
 function serve () {
 	browserSync.init({
